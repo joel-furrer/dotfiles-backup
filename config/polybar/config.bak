@@ -1,0 +1,65 @@
+[bar/topbar]
+; Name der Bar
+name = topbar
+
+; Position der Bar
+position = top
+
+; Platzierung auf dem Monitor
+monitor = eDP-1
+
+; Höhe der Bar
+height = 30
+
+; Hintergrundfarbe (Catpuccin Mocha)
+background = #1e1e2e
+
+; Schriftart und -größe
+font-0 = Iosevka:size=10
+
+; Schriftfarbe
+foreground = #d9e0ee
+
+; Rand der Bar
+padding-left = 10
+padding-right = 10
+padding-top = 0
+padding-bottom = 0
+
+; Transparente Bar (optional)
+transparency = true
+
+; Keine vertikale Zentrierung der Module
+alignment = left
+
+; Module, die angezeigt werden
+modules-left = workspace
+modules-center = date
+modules-right = cpu memory
+
+; Module für Uhrzeit und Datum
+[module/date]
+type = internal/date
+date = "%Y-%m-%d %H:%M:%S"
+time-zone = Europe/Berlin
+format = <label>
+
+[module/workspace]
+type = internal/xworkspaces
+label-focused = %name%
+label-urgent = URGENT
+label-occupied = %name%
+label-empty = " "
+label-padding = 1
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+label = "CPU: %percentage%"
+format = <label>
+
+[module/memory]
+type = internal/memory
+interval = 5
+label = "RAM: %used%"
+format = <label>

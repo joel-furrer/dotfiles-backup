@@ -1,0 +1,5 @@
+[settings]
+show-icons=true          # Zeigt Anwendungssymbole an
+allow-images=true        # Aktiviert Symbole für Anwendungen
+drun-icon-theme=Oranchelo # Legt das Symbol-Theme fest (du kannst dein Theme wählen)
+
